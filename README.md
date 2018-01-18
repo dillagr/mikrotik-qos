@@ -1,2 +1,2 @@
-# mikrotik-qos
-qos configuration for mikrotik router
+# Mikrotik QoS
+QoS configuration for Mikrotik Router
