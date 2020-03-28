@@ -1,5 +1,5 @@
 ## _Notes:_
-These configuration(s) taken from the Mikrotik forums (needs login)
+These configuration(s) taken from the Mikrotik forums (needs login). Not mine.
 
 More details here:
 * [Using RouterOS to VLAN your network](https://forum.mikrotik.com/viewtopic.php?t=143620).
