@@ -1,0 +1,7 @@
+## what is this?
+## whenever a lease is made, the script runs and logs the "hostname" of the device
+
+## ip dhcp-server lease-script
+:if ($leaseBound = "1") do={
+	:log info ($leaseServerName . " assigned " . $leaseActIP . " to " . $leaseActMAC . " (" . ([/ip dhcp-server lease get [find active-address=$leaseActIP] host-name]) . ")" )
+}
