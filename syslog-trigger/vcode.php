@@ -6,9 +6,14 @@ require('routeros_api.class.php');
 $API = new RouterosAPI();
 // $API->debug = true;
 
+// $argv[1] or nothing!
+( ! isset($argv[1] )) ? exit("ERROR: No arguments (voucher code) parsed!\n"):
+    print_r("[DEBUG] Voucher code is: $argv[1]");
+
+// EXECUTE!
 if ($API->connect('10.1.1.1', 'username', 'password')) {
 
-    // RETRIEVE USERS&COOKIES
+    // RETRIEVE USERS &COOKIES
     $API->write('/ip/hotspot/active/getall');
     $AREAD = $API->read();
     $API->write('/ip/hotspot/cookie/getall');
