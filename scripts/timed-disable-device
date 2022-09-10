@@ -1,0 +1,6 @@
+:local ADDRS [/ip dhcp-server lease find host-name="DESKTOP-7OD801I"]
+
+foreach ADDR in=$ADDRS do={
+  :local ASTR [/ip dhcp-server lease get $ADDR address]
+  /ip firewall address-list add list=_blocked-device-list address=$ASTR timeout=30m
+  }
