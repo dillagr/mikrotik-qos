@@ -1,0 +1,6 @@
+:local dnsdnat [/ip firewall nat get value-name=disabled [find comment="pihole"]]
+:local adguard [:ping 10.1.1.111 count=2]
+
+:if ( ($dnsdnat=true) and ($adguard = 0) ) do={
+  /ip firewall nat set [find comment="pihole"] disabled=no; 
+}
